@@ -1,0 +1,41 @@
+[aliases]
+  b = branch 
+  c = commit
+  chead = commit --amend -CHEAD
+  co = checkout 
+  cp = cherry-pick
+  lod = log --graph --pretty="%Cgreen%h%Creset%Cblue%d%Creset %Cred%an%Creset: %s"
+  lot = log --no-merges --pretty=oneline --pretty="format :%h %s"
+  nap = add -N . && add -p
+  p = push
+  pr = pull --rebase
+  ra = rebase --abort
+  reset-authors = commit --amend --reset-author -C HEAD
+  rc = rebase --continue
+  ri = rebase --interactive
+  st = status
+
+[color]
+  ui = auto
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+  whitespace = warn
+  autocrlf = input
+[diff]
+  algorithm = patience
+[fetch]
+  prune = true
+[include]
+  path = ~/.gitcongif.local
+[interactive]
+  singlekey = true
+[merge]
+  ff = only
+[push]
+  default = current
+[rebase]
+  autosquash = true
+[user]
+  name = Hilary Denton
+  email = hilaryous.denton@gmail.com

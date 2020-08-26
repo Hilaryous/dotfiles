@@ -1,0 +1,9 @@
+{
+  "diagnostic.errorSign": "🔥",
+  "diagnostic.hintSign": "🔍",
+  "diagnostic.infoSign": "📄",
+  "diagnostic.warningSign": "⚠️",
+  "codeLens.enable": true,
+  "coc.preferences.formatOnSaveFiletypes": ["typescript", "javascript", "typescriptreact", "typescript.tsx", "javascriptreact"],
+  "eslint.filetypes": ["typescript", "javascript", "typescriptreact", "typescript.tsx", "javascriptreact"]
+}
