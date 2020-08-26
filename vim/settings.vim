@@ -47,4 +47,30 @@ set splitright
 set complete+=kspell
 
 " Set spellcheck for md files
-autocmd BufRead,BufNewFile *.md setlocal spell
+
+" Auto Commands
+" --------------------------------------
+func! Eatchar(pat)
+  let c = nr2char(getchar(0))
+  return (c =~ a:pat) ? '' : c
+endfunc
+
+if has("autocmd")
+  augroup FTOptions
+    autocmd!
+    autocmd BufRead,BufNewFile *.md set filetype=markdown
+    autocmd BufRead,BufNewFile *.ts set syntax=javascript
+    autocmd BufRead,BufNewFile *.tsx set filetype=typescript.tsx
+    autocmd BufRead,BufNewFile *.tsx set syntax=javascript.jsx
+    autocmd BufRead,BufNewFile .env.* set filetype=sh
+    autocmd BufRead,BufNewFile COMMIT_EDITMSG setlocal spell
+    autocmd FileType markdown,text,txt setlocal textwidth=80 linebreak nolist wrap spell
+    autocmd FileType qf setlocal wrap
+    autocmd QuickFixCmdPost *grep* botright copen
+    autocmd QuitPre * if empty(&buftype) | lclose | endif
+    " Abbreviations
+    autocmd FileType javascript,javascript.jsx,typescript,typescript.tsx iabbrev <buffer> bgc backgroundColor: '',<Left><Left><C-R>=Eatchar('\s')<CR>
+    autocmd FileType javascript,javascript.jsx,typescript,typescript.tsx iabbrev <buffer> sdb outline: '1px dotted blue',<C-R>=Eatchar('\s')<CR>
+    autocmd FileType javascript,javascript.jsx,typescript,typescript.tsx iabbrev <buffer> cdl console.log()<Left><C-R>=Eatchar('\s')<CR>
+  augroup END
+endif
