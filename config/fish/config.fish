@@ -16,6 +16,7 @@ end
 # Git Aliases
 if type -q git
   alias ga='git add .'
+  alias gap='git add -p'
   alias gb='git branch'
   alias gc='git commit'
   alias gchead='git commit --amend -CHEAD'
@@ -23,7 +24,7 @@ if type -q git
   alias gcp='git cherry-pick'
   alias glod='git log --graph --pretty="%Cgreen%h%Creset%Cblue%d%Creset %Cred%an%Creset: %s"'
   alias glot='git log --no-merges --pretty=oneline --pretty="format :%h %s"'
-  alias gnap='git add -N . && add -p'
+  alias gnap='git add -N . && git add -p'
   alias gp='git push'
   alias gpr='git pull --rebase'
   alias gra='git rebase --abort'
