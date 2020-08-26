@@ -19,6 +19,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'                          " surround words/lines/etc. with stuff
   Plug 'vim-airline/vim-airline'                     " vim status/tabline
   Plug 'vim-airline/vim-airline-themes'              " theme for vim status/tabline
+  let g:coc_global_extensions = ['coc-css', 'coc-eslint', 'coc-html', 'coc-json', 'coc-lists', 'coc-tsserver', 'coc-yaml']
 
   "FILETYPES
 
