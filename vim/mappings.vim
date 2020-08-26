@@ -30,6 +30,7 @@ nnoremap tn :tabnew<CR>
 " Coc commands
 nnoremap <silent>gl :CocList files<CR>
 nnoremap gz :CocSearch<space>
+nnoremap <silent>gy :NERDTreeToggle<CR>
 
 " Pretty print json
 map <Leader>j :%!python -m json.tool<cr>

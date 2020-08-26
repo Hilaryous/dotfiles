@@ -86,3 +86,6 @@ if executable('ag')
     nnoremap <leader><bs> :Ag '<c-r><c-w>' <cr>
   endif
 endif
+
+" nerdtree
+let g:NERDTreeShowHidden=1

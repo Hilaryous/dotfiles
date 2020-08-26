@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'christoomey/vim-tmux-navigator'              " map tmux navigation to vim
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }  " navigation/search/other assorted magics
+  Plug 'scrooloose/nerdtree'
   Plug 'tpope/eunuch'                                " remove/move/ other unix commands in vim
   Plug 'tpope/vim-abolish'                           " searching/finding word variants
   Plug 'tpope/vim-commentary'                        " comment things out easily
