@@ -22,6 +22,7 @@ git pull
 ## Components
 
 - [dotbot](https://github.com/anishathalye/dotbot)
+- [kitty](https://sw.kovidgoyal.net/kitty)
 - [fish config](https://fishshell.com/)
     - [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
     - [fzf](https://github.com/junegunn/fzf)
