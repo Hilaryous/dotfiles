@@ -7,6 +7,7 @@
   brew "tree"
   brew "wget"
   brew "yarn"
+  brew "the_silver_searcher"
   cask "1password"
   cask "appcleaner"
   cask "firefox"
