@@ -11,7 +11,6 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'christoomey/vim-tmux-navigator'              " map tmux navigation to vim
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }  " navigation/search/other assorted magics
-  Plug 'scrooloose/nerdtree'
   Plug 'tpope/eunuch'                                " remove/move/ other unix commands in vim
   Plug 'tpope/vim-abolish'                           " searching/finding word variants
   Plug 'tpope/vim-commentary'                        " comment things out easily
@@ -19,7 +18,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'                          " surround words/lines/etc. with stuff
   Plug 'vim-airline/vim-airline'                     " vim status/tabline
   Plug 'vim-airline/vim-airline-themes'              " theme for vim status/tabline
-  let g:coc_global_extensions = ['coc-css', 'coc-eslint', 'coc-html', 'coc-json', 'coc-lists', 'coc-tsserver', 'coc-yaml']
+  let g:coc_global_extensions = ['coc-css', 'coc-eslint', 'coc-explorer', 'coc-html', 'coc-json', 'coc-lists', 'coc-tsserver', 'coc-yaml']
+  " Keeping around in case coc-explorer breaks
+  " Plug 'scrooloose/nerdtree'
 
   "FILETYPES
 

@@ -87,5 +87,6 @@ if executable('ag')
   endif
 endif
 
+" Keeping around in case coc-explorer borks
 " nerdtree
-let g:NERDTreeShowHidden=1
+" let g:NERDTreeShowHidden=1
