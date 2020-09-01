@@ -8,6 +8,7 @@
 
 - link:
     ~/.gitconfig: config/.gitconfig
+    ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
     ~/.config:
       glob: true
