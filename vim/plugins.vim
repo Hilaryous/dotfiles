@@ -17,6 +17,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-repeat'                            " . command for plugins
   Plug 'tpope/vim-surround'                          " surround words/lines/etc. with stuff
   Plug 'vim-airline/vim-airline'                     " vim status/tabline
+  Plug 'arcticicestudio/nord-vim'                    " vim theme
   Plug 'vim-airline/vim-airline-themes'              " theme for vim status/tabline
   let g:coc_global_extensions = ['coc-css', 'coc-eslint', 'coc-explorer', 'coc-html', 'coc-json', 'coc-lists', 'coc-tsserver', 'coc-yaml']
   " Keeping around in case coc-explorer breaks
@@ -32,3 +33,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'pangloss/vim-javascript'                     " make javascript look nice
 
 call plug#end()
+
+" Set vim theme
+colorscheme nord

@@ -1,4 +1,4 @@
-set -g theme_color_scheme gruvbox
+set -g theme_color_scheme nord
 set -Ux EDITOR nvim
 set -Ux VISUAL nvim
 

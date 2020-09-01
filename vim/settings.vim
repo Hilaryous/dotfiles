@@ -87,6 +87,9 @@ if executable('ag')
   endif
 endif
 
+" Set vim theme
+colorscheme nord
+
 " Keeping around in case coc-explorer borks
 " nerdtree
 " let g:NERDTreeShowHidden=1
