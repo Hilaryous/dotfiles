@@ -34,6 +34,7 @@ if type -q git
   alias reset-authors ='git commit --amend --reset-author -C HEAD'
 end
 
+starship init fish | source
 
 kitty + complete setup fish | source
 

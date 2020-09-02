@@ -4,6 +4,7 @@
   brew "neovim"
   brew "node"
   brew "python"
+  brew "starship"
   brew "tmux"
   brew "tree"
   brew "wget"
