@@ -10,6 +10,7 @@
     ~/.gitconfig: config/.gitconfig
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
+    ~/.agignore: agignore
     ~/.config:
       glob: true
       path: config/*

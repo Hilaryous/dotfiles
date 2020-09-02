@@ -1,0 +1,9 @@
+*.svg
+*.spec.js
+*.snap
+
+.git/
+coverage/
+dist/
+node_modules/
+yarn.lock
