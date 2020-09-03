@@ -11,7 +11,8 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'christoomey/vim-tmux-navigator'              " map tmux navigation to vim
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }  " navigation/search/other assorted magics
-  Plug 'tpope/eunuch'                                " remove/move/ other unix commands in vim
+  Plug 'tpope/vim-eunuch'                            " remove/move/ other unix commands in vim
+  Plug 'tpope/vim-fugitive'                          " vim plugin for git
   Plug 'tpope/vim-abolish'                           " searching/finding word variants
   Plug 'tpope/vim-commentary'                        " comment things out easily
   Plug 'tpope/vim-repeat'                            " . command for plugins
@@ -27,9 +28,9 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'jparise/vim-graphql'                         " make graphql look nice
   Plug 'leafgarland/typescript-vim'                  " make typescript look nice
-  Plug 'macmellon/vim-jsx-pretty'                    " make jsx look nice
   Plug 'mattn/emmet-vim'                             " html helper
-  Plug 'othree/httml5.vim'                           " make html5 look nice
+  Plug 'maxmellon/vim-jsx-pretty'                    " make jsx look nice
+  Plug 'othree/html5.vim'                            " make html5 look nice
   Plug 'pangloss/vim-javascript'                     " make javascript look nice
 
 call plug#end()
