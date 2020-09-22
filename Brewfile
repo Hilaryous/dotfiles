@@ -1,3 +1,4 @@
+  brew "ctags"
   brew "fish"
   brew "fzf"
   brew "git"
