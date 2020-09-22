@@ -1,7 +1,7 @@
 {
-  "diagnostic.errorSign": "🔥",
-  "diagnostic.hintSign": "🔍",
-  "diagnostic.infoSign": "📄",
+  "diagnostic.errorSign": "☠️",
+  "diagnostic.hintSign": "💡",
+  "diagnostic.infoSign": "ℹ️",
   "diagnostic.warningSign": "⚠️",
   "codeLens.enable": true,
   "coc.preferences.formatOnSaveFiletypes": [
