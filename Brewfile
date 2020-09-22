@@ -3,6 +3,7 @@
   brew "fzf"
   brew "git"
   brew "neovim"
+  brew "vim"
   brew "node"
   brew "python"
   brew "starship"
