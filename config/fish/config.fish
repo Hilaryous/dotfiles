@@ -4,7 +4,10 @@ set -Ux VISUAL nvim
 
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
-# export PATH=$PATH:$GOBIN
+set PATH $PATH $GOBIN
+set PATH /usr/local/bin $PATH
+set PATH $PATH /Users/hilarydenton/Library/Python/3.7/bin
+set PATH /Library/PostgreSQL/9.3/bin $PATH
 
 # Aliases
 if type -q nvim
@@ -37,6 +40,9 @@ if type -q git
   alias gst='git status'
   alias reset-authors ='git commit --amend --reset-author -C HEAD'
 end
+
+alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 
 starship init fish | source
 
