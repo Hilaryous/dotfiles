@@ -18,6 +18,13 @@
     "yaml"
   ],
   "eslint.autoFixOnSave": true,
-  "python.linting.pylintEnabled": true,
-  "python.linting.enabled": true
+  "eslint.filetypes": [
+    "typescript",
+    "javascript",
+    "typescriptreact",
+    "typescript.tsx",
+    "javascriptreact"
+  ],
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true
 }
