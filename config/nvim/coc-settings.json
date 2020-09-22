@@ -17,5 +17,7 @@
     "typescriptreact",
     "yaml"
   ],
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true
 }

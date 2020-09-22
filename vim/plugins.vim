@@ -20,7 +20,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline'                     " vim status/tabline
   Plug 'arcticicestudio/nord-vim'                    " vim theme
   Plug 'vim-airline/vim-airline-themes'              " theme for vim status/tabline
-  let g:coc_global_extensions = ['coc-css', 'coc-eslint', 'coc-explorer', 'coc-html', 'coc-json', 'coc-lists', 'coc-tsserver', 'coc-yaml']
+  let g:coc_global_extensions = ['coc-css', 'coc-eslint', 'coc-explorer', 'coc-html', 'coc-json', 'coc-lists', 'coc-python', 'coc-tsserver', 'coc-yaml']
   " Keeping around in case coc-explorer breaks
   " Plug 'scrooloose/nerdtree'
 

@@ -13,6 +13,10 @@ if type -q nvim
   alias vimdiff="nvim -d"
 end
 
+# Python Aliases
+# alias python=/usr/local/bin/python3
+# alias pip=/usr/local/bin/pip3
+
 # Git Aliases
 if type -q git
   alias ga='git add .'
