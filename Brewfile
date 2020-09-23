@@ -12,6 +12,7 @@
   brew "wget"
   brew "yarn"
   brew "the_silver_searcher"
+  cask "docker"
   cask "1password"
   cask "appcleaner"
   cask "firefox"
