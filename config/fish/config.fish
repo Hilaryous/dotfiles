@@ -5,9 +5,14 @@ set -Ux VISUAL nvim
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 set PATH $PATH $GOBIN
+
 set PATH /usr/local/bin $PATH
-set PATH $PATH /Users/hilarydenton/Library/Python/3.7/bin
+
 set PATH /Library/PostgreSQL/9.3/bin $PATH
+
+export PYENV_ROOT="$HOME/.pyenv"
+set PATH $PYENV_ROOT/bin $PATH
+set PATH $HOME/.poetry/bin $PATH
 
 # Aliases
 if type -q nvim
@@ -15,10 +20,6 @@ if type -q nvim
   alias vim='nvim'
   alias vimdiff="nvim -d"
 end
-
-# Python Aliases
-# alias python=/usr/local/bin/python3
-# alias pip=/usr/local/bin/pip3
 
 # Git Aliases
 if type -q git
@@ -48,4 +49,4 @@ starship init fish | source
 
 kitty + complete setup fish | source
 
-
+status --is-interactive; and source (pyenv init -|psub)

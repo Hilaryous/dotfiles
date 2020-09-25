@@ -1,8 +1,8 @@
 {
-  "diagnostic.errorSign": "☠️",
-  "diagnostic.hintSign": "💡",
-  "diagnostic.infoSign": "ℹ️",
-  "diagnostic.warningSign": "⚠️",
+  "diagnostic.errorSign": "E",
+  "diagnostic.hintSign": "H",
+  "diagnostic.infoSign": "I",
+  "diagnostic.warningSign": "W",
   "codeLens.enable": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
