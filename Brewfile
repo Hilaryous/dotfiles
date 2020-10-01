@@ -12,6 +12,7 @@
   brew "yarn"
   brew "redis"
   brew "postgresql"
+  brew "pyenv"
   brew "the_silver_searcher"
   cask "docker"
   cask "1password"
