@@ -20,6 +20,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'                          " surround words/lines/etc. with stuff
   Plug 'vim-airline/vim-airline'                     " vim status/tabline
   Plug 'vim-airline/vim-airline-themes'              " theme for vim status/tabline
+  Plug 'LucHermitte/lh-vim-lib'
+  Plug 'LucHermitte/local_vimrc'
   let g:coc_global_extensions = ['coc-css', 'coc-eslint', 'coc-explorer', 'coc-html', 'coc-json', 'coc-lists', 'coc-python', 'coc-tsserver', 'coc-yaml']
   " Keeping around in case coc-explorer breaks
   " Plug 'scrooloose/nerdtree'

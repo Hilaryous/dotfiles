@@ -1,3 +1,4 @@
 .python-version
 .vim/*
 uploads/
+_vimrc_local.vim
