@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x #echo on
 
 # Check if Homebrew is installed
 if [ ! -f "`which brew`" ]; then

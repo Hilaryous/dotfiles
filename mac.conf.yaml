@@ -1,6 +1,15 @@
 - shell:
-    - [sh ./scripts/mac-pre-install.sh , Running --mac-- pre installation script]
-    - [brew bundle, Installing Homebrew formulas from Brewfile]
+    -
+      command: sh ./scripts/mac-pre-install.sh
+      description: Running --mac-- pre installation script
+      stderr: true
+      stdout: true
+      stdin: true
+    - 
+      command: brew bundle
+      description: Installing Homebrew formulas from Brewfile
+      stderr: true
+      stdout: true
 
 - link:
     ~/Brewfile: Brewfile
