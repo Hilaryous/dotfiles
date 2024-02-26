@@ -4,7 +4,7 @@ set -e
 
 declare -a DEFAULT_CONFIG_PREFIX
 
-CONFIG_PREFIXES=(default mac)
+CONFIG_PREFIXES=(mac default)
 #CONFIG_PREFIXES=(default)
 CONFIG_SUFFIX=".conf.yaml"
 DOTBOT_DIR="dotbot"

@@ -1,19 +1,21 @@
 #!/bin/bash
 
-if [ ! -d "/path/to/dir" ]; then
-  echo 'Installing xxev'
-  # Download xxenv and add plugin to pyenv
-  git clone https://github.com/momo-lab/xxenv-latest.git "$(pyenv root)"/plugins/xxenv-latest
+# install pyenv
+if [ ! -f "`which brew`" ]; then
+  brew install pyenv
 fi
 # install the latest python version with pyenv
 echo 'Installing latest python'
-pyenv latest install
+pyenv install 3.12.2
 # set the latest python version globally with pyenv
 echo 'Setting latest python to global'
-pyenv latest global
+pyenv global 3.12.2
 # install virtual fish
 echo 'Installing virtual fish'
 python -m pip install virtualfish
+# install python setuptools
+echo 'Installing python setup tools'
+python -m pip install setuptools
 # setup virtual fish
 echo 'Setting up virtual fish'
 vf install
