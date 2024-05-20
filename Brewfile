@@ -14,6 +14,8 @@
   brew "postgresql"
   brew "pyenv"
   brew "the_silver_searcher"
+  brew "rbenv"
+  brew "ruby-build"
   cask "docker"
   cask "1password"
   cask "appcleaner"

@@ -50,3 +50,6 @@ starship init fish | source
 kitty + complete setup fish | source
 
 status --is-interactive; and source (pyenv init -|psub)
+status --is-interactive; and rbenv init - fish | source
+set -gx VOLTA_HOME "$HOME/.volta"
+set -gx PATH "$VOLTA_HOME/bin" $PATH

@@ -88,3 +88,13 @@ if executable('ag')
 endif
 
 let g:go_def_mapping_enabled = 0
+
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction

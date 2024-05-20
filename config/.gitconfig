@@ -39,3 +39,5 @@
 [user]
   name = Hilary Denton
   email = hilaryous.denton@gmail.com
+[init]
+	defaultBranch = main
