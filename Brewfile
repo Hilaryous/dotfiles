@@ -30,3 +30,4 @@
   cask "arc"
   cask "aws-vault"
   cask "visual-studio-code"
+  cask "font-hack-nerd-font"
