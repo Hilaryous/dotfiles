@@ -19,6 +19,7 @@
   brew "awscli"
   brew "nvm"
   brew "fisher"
+  brew "tmuxinator"
   cask "docker"
   cask "1password"
   cask "appcleaner"
