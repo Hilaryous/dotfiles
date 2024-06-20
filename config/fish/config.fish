@@ -6,7 +6,7 @@ export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 set PATH $PATH $GOBIN
 
-set PATH /usr/local/bin $PATH
+set PATH /opt/homebrew/bin $PATH
 
 set PATH /Library/PostgreSQL/9.3/bin $PATH
 
