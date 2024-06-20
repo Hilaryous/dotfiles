@@ -19,6 +19,9 @@
     ~/.vim: 
       glob: true
       path: vim/*
+    ~/.aws:
+      glob: true
+      path: aws/*
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
