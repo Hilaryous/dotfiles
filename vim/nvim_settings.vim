@@ -1,4 +1,4 @@
-" makes widmenu nice
+" makes wildmenu nice
 set wildmenu
 set wildmode=longest:full,full
 set cmdheight=1

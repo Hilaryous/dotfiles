@@ -4,28 +4,10 @@
   "diagnostic.infoSign": "I",
   "diagnostic.warningSign": "W",
   "codeLens.enable": true,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "css",
-    "graphql",
-    "html",
-    "javascript",
-    "javascriptreact",
-    "json",
-    "markdown",
-    "py",
-    "typescript",
-    "typescript.tsx",
-    "typescriptreact",
-    "yaml"
-  ],
+  "[css][graphql][html][javascript][javascriptreact][json][markdown][typescript][typescript.tsx][typescriptreact][yaml]": {
+    "coc.preferences.formatOnSave": true
+  },
   "eslint.autoFixOnSave": true,
-  "eslint.filetypes": [
-    "typescript",
-    "javascript",
-    "typescriptreact",
-    "typescript.tsx",
-    "javascriptreact"
-  ],
   "python.linting.flake8Enabled": true,
   "python.linting.mypyEnabled": true,
   "python.jediEnabled": true,
