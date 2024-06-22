@@ -27,6 +27,7 @@
   cask "aws-vault"
   cask "docker"
   cask "firefox"
+  cask "font-caskaydia-mono-nerd-font"
   cask "font-hack-nerd-font"
   cask "kitty"
   cask "postman"
