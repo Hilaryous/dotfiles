@@ -1,7 +1,7 @@
 " Clear search highlighting
 map <Leader><space> :nohl<cr>
 
-" Hide the quickfix window
+" Clear search highlighting
 noremap <silent><leader>\ :nohlsearch<CR>
 
 " Switch between the last two files
@@ -29,10 +29,9 @@ nnoremap tn :tabnew<CR>
 
 " Coc commands
 nnoremap <silent>gl :CocList files<CR>
-nnoremap gz :CocSearch<space>
+nnoremap \ :CocSearch<SPACE>
+nnoremap <leader><bs> :CocSearch <c-r><c-w> <cr>
 nmap <silent>gy :CocCommand explorer<CR>
-" Keep around in case coc-explorer borks
-" nnoremap <silent>gy :NERDTreeToggle<CR>
 
 " Pretty print json
 map <Leader>j :%!python -m json.tool<cr>

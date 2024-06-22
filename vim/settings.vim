@@ -58,33 +58,15 @@ endfunc
 if has("autocmd")
   augroup FTOptions
     autocmd!
-    autocmd BufRead,BufNewFile *.md set filetype=markdown
-    autocmd BufRead,BufNewFile *.ts set syntax=javascript
-    autocmd BufRead,BufNewFile *.tsx set filetype=typescript.tsx
-    autocmd BufRead,BufNewFile *.tsx set syntax=javascript.jsx
-    autocmd BufRead,BufNewFile .env.* set filetype=sh
     autocmd BufRead,BufNewFile COMMIT_EDITMSG setlocal spell
     autocmd FileType markdown,text,txt setlocal textwidth=80 linebreak nolist wrap spell
     autocmd FileType qf setlocal wrap
-    autocmd QuickFixCmdPost *grep* botright copen
-    autocmd QuitPre * if empty(&buftype) | lclose | endif
     " Abbreviations
-    autocmd FileType javascript,javascript.jsx,typescript,typescript.tsx iabbrev <buffer> bgc backgroundColor: '',<Left><Left><C-R>=Eatchar('\s')<CR>
+    "" Put an outline around things for debugiing CSS
     autocmd FileType javascript,javascript.jsx,typescript,typescript.tsx iabbrev <buffer> sdb outline: '1px dotted blue',<C-R>=Eatchar('\s')<CR>
+    "" Console.log shortcut
     autocmd FileType javascript,javascript.jsx,typescript,typescript.tsx iabbrev <buffer> cdl console.log()<Left><C-R>=Eatchar('\s')<CR>
   augroup END
-endif
-
-" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  if !exists(":Ag")
-    command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-    nnoremap \ :Ag<SPACE>
-    nnoremap <leader><bs> :Ag '<c-r><c-w>' <cr>
-  endif
 endif
 
 let g:go_def_mapping_enabled = 0
