@@ -1124,7 +1124,7 @@
         }
       },
       "kitty": {
-        "version": "0.35.1",
+        "version": "0.35.2",
         "options": {
           "full_name": "kitty"
         }
@@ -1190,7 +1190,7 @@
         }
       },
       "todoist": {
-        "version": "9.6.0",
+        "version": "9.6.2",
         "options": {
           "full_name": "todoist"
         }
@@ -1222,7 +1222,7 @@
         "macOS": "13.6.4"
       },
       "sonoma": {
-        "HOMEBREW_VERSION": "4.3.6",
+        "HOMEBREW_VERSION": "4.3.7",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "15.3.0.0.1.1708646388",

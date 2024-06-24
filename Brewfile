@@ -7,7 +7,6 @@
   brew "golang"
   brew "neovim"
   brew "node"
-  brew "nvm"
   brew "postgresql"
   brew "pyenv"
   brew "rbenv"
