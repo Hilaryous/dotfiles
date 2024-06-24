@@ -17,6 +17,7 @@
   brew "tmux"
   brew "tmuxinator"
   brew "tree"
+  brew "typescript"
   brew "volta"
   brew "wget"
   brew "yarn"
