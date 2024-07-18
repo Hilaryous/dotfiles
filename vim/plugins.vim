@@ -30,6 +30,15 @@ call plug#begin('~/.vim/plugged')
   Plug 'maxmellon/vim-jsx-pretty'                    " make jsx look nice
   Plug 'othree/html5.vim'                            " make html5 look nice
   Plug 'pangloss/vim-javascript'                     " make javascript look nice
+  Plug 'digitaltoad/vim-pug'                         " make pug look nice
+
+  "PRODUCTIVITY
+  Plug 'wakatime/vim-wakatime'
+
+  "DEBUGGING
+  Plug 'mfussenegger/nvim-dap'
+  Plug 'nvim-telescope/telescope-dap.nvim'
+
 
 call plug#end()
 

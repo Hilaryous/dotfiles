@@ -32,6 +32,7 @@ nnoremap <silent>gl :CocList files<CR>
 nnoremap \ :CocSearch<SPACE>
 nnoremap <leader><bs> :CocSearch <c-r><c-w> <cr>
 nmap <silent>gy :CocCommand explorer<CR>
+nmap <silent> gd <Plug>(coc-definition)
 
 " Pretty print json
 map <Leader>j :%!python -m json.tool<cr>
