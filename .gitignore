@@ -2,3 +2,4 @@
 .vim/*
 uploads/
 _vimrc_local.vim
+**/packer_compiled.lua
