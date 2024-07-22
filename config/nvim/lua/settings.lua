@@ -1,7 +1,7 @@
 -- Leader
 vim.g.mapleader = " "
-vim.api.nvim_set_keymap('n', '\\', '<Space>', { noremap = true })
-vim.api.nvim_set_keymap('n', ',', '<Space>', { noremap = true })
+vim.keymap.set('n', '\\', '<Space>', { noremap = true })
+vim.keymap.set('n', ',', '<Space>', { noremap = true })
 
 vim.o.backspace = '2' -- Backspace deletes like most programs in insert mode
 vim.o.backup = false -- No backup files
@@ -46,6 +46,12 @@ vim.o.splitright = true
 -- Autocomplete with dictionary words when spell check is on
 vim.o.complete = vim.o.complete .. ',kspell'
 
+-- Makes wildmenu nice
+vim.o.wildmenu = true
+vim.o.wildmode = 'longest:full,full'
+vim.o.cmdheight = 1
+vim.o.wildignore = vim.o.wildignore .. '*.DS_Store'
+
 -- Auto Commands
 if vim.api.nvim_has_autocmd ~= nil then
     -- Clear existing augroup named FTOptions if it exists
@@ -84,7 +90,7 @@ end
 vim.g.go_def_mapping_enabled = 0
 
 -- Mapping for showing documentation
-vim.api.nvim_set_keymap('n', 'K', ':call ShowDocumentation()<CR>', { silent = true })
+vim.keymap.set('n', 'K', ':call ShowDocumentation()<CR>', { silent = true })
 
 function ShowDocumentation()
   if vim.fn['coc#rpc#ready']() and vim.fn['coc#rpc#has_provider']('hover') then
