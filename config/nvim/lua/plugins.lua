@@ -53,7 +53,7 @@ return require('packer').startup(function(use)
 
   -- Debugging
   use 'mfussenegger/nvim-dap'                     -- Debugger
-  use { 'nvim-telescope/telescope-dap.nvim' }     -- Telescope integration for DAP
+  use 'nvim-telescope/telescope-dap.nvim'         -- Telescope integration for DAP
 
   -- Theme
   use {
