@@ -9,16 +9,12 @@
 - link:
     ~/.gitconfig: config/.gitconfig
     ~/.tmux.conf: tmux.conf
-    ~/.vimrc: vimrc
     ~/.agignore: agignore
     ~/.gitignore: gitignore
     ~/.config:
       glob: true
       path: config/*
       create: true
-    ~/.vim: 
-      glob: true
-      path: vim/*
     ~/.aws:
       glob: true
       path: aws/*
