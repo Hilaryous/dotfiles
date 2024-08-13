@@ -4,13 +4,12 @@
       relink: true
       force: true
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
     ~/.gitconfig: config/.gitconfig
     ~/.tmux.conf: tmux.conf
-    ~/.agignore: agignore
-    ~/.gitignore: gitignore
+    ~/.gitignore: .gitignore
     ~/.config:
       glob: true
       path: config/*
