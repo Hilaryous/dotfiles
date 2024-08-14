@@ -90,13 +90,19 @@ end
 vim.g.go_def_mapping_enabled = 0
 
 -- Mapping for showing documentation
-vim.keymap.set('n', 'K', ':call ShowDocumentation()<CR>', { silent = true })
 
 function ShowDocumentation()
-  if vim.fn['coc#rpc#ready']() and vim.fn['coc#rpc#has_provider']('hover') then
-    vim.fn['coc#rpc#async']('doHover')
-  else
-    vim.api.nvim_feedkeys('K', 'n', true)
+   if vim.fn['coc#rpc#ready']() == 1 then
+    local has_hover = vim.fn.CocAction('hasProvider', 'hover')
+    if has_hover then
+      vim.fn.CocActionAsync('doHover')
+      return
+    end
   end
+
+  vim.api.nvim_feedkeys('K', 'n', true)
 end
 
+vim.keymap.set('n', 'K', function()
+  ShowDocumentation()
+end, { silent = true })
