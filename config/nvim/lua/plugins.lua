@@ -22,7 +22,9 @@ return require('packer').startup(function(use)
     'neoclide/coc.nvim',
      branch = 'release',
      config = function()
-      local extensions = {'coc-css', 'coc-eslint', 'coc-explorer', 'coc-html', 'coc-json', 'coc-lists', 'coc-python', 'coc-tsserver', 'coc-yaml', 'coc-prettier', 'coc-lua'}
+      local extensions = {'coc-css', 'coc-eslint', 'coc-explorer', 'coc-html', 'coc-json',
+      'coc-lists', 'coc-python', 'coc-tsserver', 'coc-yaml', 'coc-prettier', 'coc-lua',
+      'yaegassy/coc-pug', 'coc-xml'}
       vim.fn['coc#rpc#request']('installExtensions', extensions)
      end
   }
@@ -44,6 +46,7 @@ return require('packer').startup(function(use)
   use 'othree/html5.vim'                          -- HTML5 syntax
   use 'pangloss/vim-javascript'                   -- JavaScript syntax
   use 'digitaltoad/vim-pug'                       -- Pug syntax
+  use 'elzr/vim-json'                             -- JSON syntax
 
   -- Productivity
   use 'wakatime/vim-wakatime'                     -- Track time spent in Vim
