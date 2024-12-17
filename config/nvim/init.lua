@@ -1,7 +1,3 @@
-require('plugins')
-require('settings')
-require('mappings')
-
 -- Function to safely load modules
 local function load_module(module_name)
     local ok, mod = pcall(require, module_name)
@@ -14,6 +10,6 @@ local function load_module(module_name)
 end
 
 -- Load modules with error handling
-load_module('plugins')
+load_module('config.lazy')
 load_module('settings')
 load_module('mappings')
