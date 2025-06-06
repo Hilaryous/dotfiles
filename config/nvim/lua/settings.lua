@@ -12,6 +12,7 @@ vim.o.ruler = true -- Show the cursor position all the time
 vim.o.showcmd = true -- Display incomplete commands
 vim.o.laststatus = 2 -- Always display the status line
 vim.o.autowrite = true -- Automatically :write before running commands
+vim.o.autoread = true -- Automatically update when changes are made outside of vim
 
 -- Better search behavior
 vim.o.hlsearch = true

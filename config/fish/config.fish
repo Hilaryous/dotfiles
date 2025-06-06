@@ -52,3 +52,5 @@ status --is-interactive; and source (pyenv init -|psub)
 status --is-interactive; and rbenv init - fish | source
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
+
+set -x AWS_SESSION_TOKEN_TTL 36h
