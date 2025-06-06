@@ -14,6 +14,13 @@ vim.o.laststatus = 2 -- Always display the status line
 vim.o.autowrite = true -- Automatically :write before running commands
 vim.o.autoread = true -- Automatically update when changes are made outside of vim
 
+-- More robust autoread settings
+vim.api.nvim_create_autocmd({ "FocusGained", "BufReadPost" }, {
+  callback = function()
+    vim.cmd("checktime")
+  end,
+})
+
 -- Better search behavior
 vim.o.hlsearch = true
 vim.o.incsearch = true
@@ -35,6 +42,9 @@ vim.o.joinspaces = false -- Use one space, not two, after punctuation
 -- Make it obvious where 100 characters is
 vim.o.textwidth = 100
 vim.o.colorcolumn = '+1'
+
+-- Ensure CoC completion confirm works
+vim.api.nvim_set_keymap('i', '<C-y>', 'pumvisible() ? coc#_select_confirm() : "<C-y>"', { expr = true, noremap = true, silent = true })
 
 -- Numbers
 vim.o.number = true
