@@ -22,6 +22,7 @@
   editor = nvim
   whitespace = warn
   autocrlf = input
+	hooksPath = /Users/hilarydenton/.git-hooks
 [diff]
   algorithm = patience
 [fetch]
@@ -41,3 +42,10 @@
   email = 5042071+Hilaryous@users.noreply.github.com
 [init]
 	defaultBranch = main
+                                                                                        [diff "lfs"]
+	textconv = cat
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process

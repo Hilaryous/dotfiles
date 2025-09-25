@@ -4,7 +4,7 @@
   "diagnostic.infoSign": "I",
   "diagnostic.warningSign": "W",
   "codeLens.enable": true,
-  "[css][graphql][html][javascript][javascriptreact][json][markdown][typescript][typescript.tsx][typescriptreact][yaml][pug]": {
+  "[css][graphql][html][javascript][javascriptreact][json][markdown][typescript][typescript.tsx][typescriptreact][yaml][pug][xml]": {
     "coc.preferences.formatOnSave": true
   },
   "eslint.autoFixOnSave": true,

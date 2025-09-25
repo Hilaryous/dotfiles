@@ -17,6 +17,10 @@
     ~/.aws:
       glob: true
       path: aws/*
+    ~/.git-hooks:
+      glob: true
+      path: git/hooks/*
+      create: true
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

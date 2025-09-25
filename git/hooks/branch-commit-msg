@@ -1,0 +1,38 @@
+#!/bin/sh
+set -eu
+
+MSG_FILE="$1"
+
+# --- Branch name check (your team's convention) ---
+# Allowed prefixes: feature/, feat/, fix/, chore/, hotfix/
+# Optional issue segment like "#123-" after the slash
+# Examples that pass:
+#   feature/#4489-add-sparkles-to-title
+#   feat/add-sparkles
+#   fix/#3-ci-failure
+BRANCH="$(git symbolic-ref --quiet --short HEAD 2>/dev/null || true)"
+
+if [ -n "${BRANCH}" ]; then
+  case "$BRANCH" in
+    feature/*|feat/*|fix/*|chore/*|hotfix/*)
+      if ! printf "%s" "$BRANCH" | grep -Eq '^(feature|feat|fix|chore|hotfix)/(#?[0-9]+-)?[a-z0-9._-]+$'; then
+        echo "❌ Invalid branch name:"
+        echo "   '$BRANCH'"
+        echo "   Expected: <prefix>/(#<issue>-)?<kebab-case>"
+        echo "   Prefix ∈ {feature|feat|fix|chore|hotfix}"
+        echo "   Example: feature/#123-add-sparkles-to-title"
+        exit 1
+      fi
+      ;;
+    *)
+      echo "❌ Invalid branch prefix in '$BRANCH'."
+      echo "   Prefix must be one of: feature/, feat/, fix/, chore/, hotfix/"
+      exit 1
+      ;;
+  esac
+fi
+
+# --- Conventional Commits check via commitlint ---
+# Use npx to fetch the CLI AND the conventional config each run (no repo deps).
+npx --yes -p @commitlint/cli -p @commitlint/config-conventional \
+  commitlint --config "$HOME/.config/commitlint/config.cjs" --edit "$MSG_FILE"

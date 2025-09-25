@@ -4,6 +4,7 @@
   brew "fisher"
   brew "fzf"
   brew "git"
+  brew "git-lfs"
   brew "golang"
   brew "java"
   brew "lua"

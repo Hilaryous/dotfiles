@@ -28,7 +28,7 @@ require("lazy").setup({
     build = function()
       local extensions = {'coc-css', 'coc-eslint', 'coc-explorer', 'coc-html', 'coc-json',
       'coc-lists', 'coc-python', 'coc-tsserver', 'coc-yaml', 'coc-prettier', 'coc-lua',
-      '@yaegassy/coc-pug'}
+      '@yaegassy/coc-pug', 'coc-xml'}
       vim.fn['coc#rpc#request']('installExtensions', extensions)
     end,
   },
@@ -50,6 +50,7 @@ require("lazy").setup({
   { "pangloss/vim-javascript" },
   { "digitaltoad/vim-pug" },
   { "elzr/vim-json" },
+  { "othree/xml.vim" },  -- XML support
 
   -- Productivity
   { "wakatime/vim-wakatime" },
