@@ -39,3 +39,4 @@
   cask "spotify"
   cask "todoist"
   cask "visual-studio-code"
+  cask "claude-code"
