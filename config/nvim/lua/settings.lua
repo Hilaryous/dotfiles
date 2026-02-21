@@ -75,19 +75,7 @@ if vim.api.nvim_has_autocmd ~= nil then
         command = "setlocal wrap"
     })
 
-    -- Abbreviations for JavaScript and TypeScript files
-    vim.api.nvim_create_autocmd({"FileType"}, {
-        pattern = {"javascript", "javascript.jsx", "typescript", "typescript.tsx"},
-        callback = function()
-            vim.api.nvim_command("iabbrev <buffer> sdb outline: '1px dotted blue',<C-R>=Eatchar('\\s')<CR>")
-            vim.api.nvim_command("iabbrev <buffer> cdl console.log()<Left><C-R>=Eatchar('\\s')<CR>")
-        end
-    })
 end
-
-
--- Disable default Go to definition mapping
-vim.g.go_def_mapping_enabled = 0
 
 -- Mapping for showing documentation
 

@@ -19,7 +19,7 @@
   ui = auto
 [core]
   excludesfile = ~/.gitignore
-  editor = vim
+  editor = nvim
   whitespace = warn
   autocrlf = input
 [diff]
@@ -27,7 +27,7 @@
 [fetch]
   prune = true
 [include]
-  path = ~/.gitcongif.local
+  path = ~/.gitconfig.local
 [interactive]
   singlekey = true
 [merge]

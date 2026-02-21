@@ -9,10 +9,5 @@
   },
   "eslint.autoFixOnSave": true,
   "Lua.diagnostics.globals": ["vim"],
-  "python.linting.flake8Enabled": true,
-  "python.linting.mypyEnabled": true,
-  "python.jediEnabled": true,
-  "python.linting.banditEnabled": true,
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": true
+  "python.linting.enabled": false
 }
