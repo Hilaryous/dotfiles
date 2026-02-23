@@ -12,10 +12,10 @@ echo 'Setting latest python to global'
 pyenv global 3.12.2
 # install virtual fish
 echo 'Installing virtual fish'
-python -m pip install virtualfish
+python -m pip install --quiet virtualfish
 # install python setuptools
 echo 'Installing python setup tools'
-python -m pip install setuptools
+python -m pip install --quiet setuptools
 # setup virtual fish
 echo 'Setting up virtual fish'
 vf install

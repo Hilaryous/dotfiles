@@ -19,5 +19,5 @@ if [ "$SHELL" != "/opt/homebrew/bin/fish" ]; then
   echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
   chsh -s /opt/homebrew/bin/fish
 else
-  echo "Your shell is already set to fish (/opt/homebrew/bin/fish), skipping switching shell to fish"
+  echo "Shell already set to fish, skipping."
 fi

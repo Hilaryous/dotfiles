@@ -23,7 +23,7 @@
       create: true
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+  - [git submodule update --init --recursive --quiet, Installing submodules]
   -
     command: sh ./scripts/vf-setup.sh
     description: Setup pyenv and vf
