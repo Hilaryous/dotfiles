@@ -4,10 +4,17 @@
   "diagnostic.infoSign": "I",
   "diagnostic.warningSign": "W",
   "codeLens.enable": true,
-  "[css][graphql][html][javascript][javascriptreact][json][markdown][typescript][typescript.tsx][typescriptreact][yaml][pug][xml]": {
+  "[css][graphql][html][javascript][javascriptreact][json][markdown][typescript][typescript.tsx][typescriptreact][yaml][pug]": {
     "coc.preferences.formatOnSave": true
   },
+  "[xml]": {
+    "coc.preferences.formatOnSave": false
+  },
   "eslint.autoFixOnSave": true,
+  "eslint.format.enable": false,
   "Lua.diagnostics.globals": ["vim"],
-  "python.linting.enabled": false
+  "python.linting.enabled": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }

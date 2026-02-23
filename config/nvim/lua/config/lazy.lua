@@ -51,6 +51,7 @@ require("lazy").setup({
   { "digitaltoad/vim-pug" },
   { "elzr/vim-json" },
   { "othree/xml.vim" },  -- XML support
+  { "iamcco/markdown-preview.nvim" },  -- md preview
 
   -- Productivity
   { "wakatime/vim-wakatime" },
