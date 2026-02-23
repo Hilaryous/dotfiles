@@ -9,4 +9,6 @@ SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
 SETUVAR FZF_TMUX_HEIGHT:40\x25
 SETUVAR --export VISUAL:nvim
 SETUVAR __fish_initialized:4300
+
+SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_greeting:Welcome\x20to\x20fish\x2c\x20the\x20friendly\x20interactive\x20shell\x0aType\x20\x60help\x60\x20for\x20instructions\x20on\x20how\x20to\x20use\x20fish
