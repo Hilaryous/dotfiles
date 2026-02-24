@@ -40,16 +40,20 @@ require("lazy").setup({
   { "vim-airline/vim-airline" },
   { "vim-airline/vim-airline-themes" },
 
-  -- Filetype plugins
-  { "jparise/vim-graphql" },
-  { "leafgarland/typescript-vim" },
+  -- Syntax / filetype
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function()
+      require("nvim-treesitter").setup({
+        ensure_installed = {
+          "javascript", "typescript", "tsx",
+          "html", "css", "json", "graphql", "pug", "xml", "lua",
+        },
+      })
+    end,
+  },
   { "mattn/emmet-vim" },
-  { "maxmellon/vim-jsx-pretty" },
-  { "othree/html5.vim" },
-  { "pangloss/vim-javascript" },
-  { "digitaltoad/vim-pug" },
-  { "elzr/vim-json" },
-  { "othree/xml.vim" },  -- XML support
   { "iamcco/markdown-preview.nvim" },  -- md preview
 
   -- Productivity
