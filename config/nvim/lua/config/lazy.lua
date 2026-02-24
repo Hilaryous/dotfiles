@@ -56,9 +56,6 @@ require("lazy").setup({
   { "mattn/emmet-vim" },
   { "iamcco/markdown-preview.nvim" },  -- md preview
 
-  -- Productivity
-  { "wakatime/vim-wakatime" },
-
   -- Theme
   {
     "shaunsingh/nord.nvim",
