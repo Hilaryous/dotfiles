@@ -1,13 +1,12 @@
 -- Leader
 vim.g.mapleader = " "
-vim.keymap.set('n', '\\', '<Space>', { noremap = true })
 vim.keymap.set('n', ',', '<Space>', { noremap = true })
 
-vim.o.backspace = '2' -- Backspace deletes like most programs in insert mode
 vim.o.backup = false -- No backup files
 vim.o.writebackup = false -- No backup file while editing
 vim.o.swapfile = false -- http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
-vim.o.history = 50 -- History of commands
+vim.o.undofile = true -- Persist undo history across sessions
+vim.o.history = 1000 -- History of commands
 vim.o.ruler = true -- Show the cursor position all the time
 vim.o.showcmd = true -- Display incomplete commands
 vim.o.laststatus = 2 -- Always display the status line
@@ -64,44 +63,31 @@ vim.o.cmdheight = 1
 vim.o.wildignore = vim.o.wildignore .. '*.DS_Store'
 
 -- Auto Commands
-if vim.api.nvim_has_autocmd ~= nil then
-    -- Clear existing augroup named FTOptions if it exists
-    vim.api.nvim_command('augroup FTOptions | autocmd! | augroup END')
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+    pattern = "COMMIT_EDITMSG",
+    command = "setlocal spell"
+})
 
-    -- Autocommand for COMMIT_EDITMSG buffers
-    vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
-        pattern = "COMMIT_EDITMSG",
-        command = "setlocal spell"
-    })
+vim.api.nvim_create_autocmd({"FileType"}, {
+    pattern = {"markdown", "text", "txt"},
+    command = "setlocal textwidth=80 | setlocal linebreak | setlocal nolist | setlocal wrap | setlocal spell"
+})
 
-    -- Autocommand for markdown, text, and txt filetypes
-    vim.api.nvim_create_autocmd({"FileType"}, {
-        pattern = {"markdown", "text", "txt"},
-        command = "setlocal textwidth=80 | setlocal linebreak | setlocal nolist | setlocal wrap | setlocal spell"
-    })
-
-    -- Autocommand for quickfix windows
-    vim.api.nvim_create_autocmd({"FileType"}, {
-        pattern = "qf",
-        command = "setlocal wrap"
-    })
-
-end
+vim.api.nvim_create_autocmd({"FileType"}, {
+    pattern = "qf",
+    command = "setlocal wrap"
+})
 
 -- Mapping for showing documentation
-
-function ShowDocumentation()
-   if vim.fn['coc#rpc#ready']() == 1 then
+local function show_documentation()
+  if vim.fn['coc#rpc#ready']() == 1 then
     local has_hover = vim.fn.CocAction('hasProvider', 'hover')
     if has_hover then
       vim.fn.CocActionAsync('doHover')
       return
     end
   end
-
   vim.api.nvim_feedkeys('K', 'n', true)
 end
 
-vim.keymap.set('n', 'K', function()
-  ShowDocumentation()
-end, { silent = true })
+vim.keymap.set('n', 'K', show_documentation, { silent = true })
