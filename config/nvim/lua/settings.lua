@@ -42,9 +42,6 @@ vim.o.joinspaces = false -- Use one space, not two, after punctuation
 vim.o.textwidth = 100
 vim.o.colorcolumn = '+1'
 
--- Ensure CoC completion confirm works
-vim.api.nvim_set_keymap('i', '<C-y>', 'pumvisible() ? coc#_select_confirm() : "<C-y>"', { expr = true, noremap = true, silent = true })
-
 -- Numbers
 vim.o.number = true
 vim.o.numberwidth = 5
@@ -78,16 +75,4 @@ vim.api.nvim_create_autocmd({"FileType"}, {
     command = "setlocal wrap"
 })
 
--- Mapping for showing documentation
-local function show_documentation()
-  if vim.fn['coc#rpc#ready']() == 1 then
-    local has_hover = vim.fn.CocAction('hasProvider', 'hover')
-    if has_hover then
-      vim.fn.CocActionAsync('doHover')
-      return
-    end
-  end
-  vim.api.nvim_feedkeys('K', 'n', true)
-end
-
-vim.keymap.set('n', 'K', show_documentation, { silent = true })
+vim.keymap.set('n', 'K', vim.lsp.buf.hover, { silent = true })

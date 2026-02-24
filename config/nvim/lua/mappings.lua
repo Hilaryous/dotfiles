@@ -27,12 +27,16 @@ vim.keymap.set('n', 'tl', ':tablast<CR>', { noremap = true })
 vim.keymap.set('n', 'tc', ':tabclose<CR>', { noremap = true })
 vim.keymap.set('n', 'tn', ':tabnew<CR>', { noremap = true })
 
--- Coc commands
-vim.keymap.set('n', 'gl', ':CocList files<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '\\', ':CocSearch<SPACE>', { noremap = true, silent = true })
-vim.keymap.set('n', '<Leader><bs>', ':CocSearch <C-r><C-w> <CR>', { noremap = true, silent = true })
-vim.keymap.set('n', 'gy', ':CocCommand explorer<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', 'gd', '<Plug>(coc-definition)', { noremap = true, silent = true })
+-- File navigation
+vim.keymap.set('n', 'gl', function() require('fzf-lua').files() end, { silent = true })
+vim.keymap.set('n', '\\', ':GrugFar<CR>', { silent = true })
+vim.keymap.set('n', '<Leader><bs>', function()
+  require('grug-far').open({ prefills = { search = vim.fn.expand('<cword>') } })
+end, { silent = true })
+vim.keymap.set('n', 'gy', ':Neotree toggle<CR>', { silent = true })
+
+-- LSP
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { silent = true })
 
 -- Pretty print json
 vim.keymap.set('n', '<Leader>j', ':!python -m json.tool<CR>', { noremap = true })

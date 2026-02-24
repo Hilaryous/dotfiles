@@ -22,16 +22,84 @@ require("lazy").setup({
 
   -- Editor plugins
   { "christoomey/vim-tmux-navigator" },  -- Tmux navigation
+
+  -- LSP
   {
-    "neoclide/coc.nvim",
-    branch = "release",
-    build = function()
-      local extensions = {'coc-css', 'coc-eslint', 'coc-explorer', 'coc-html', 'coc-json',
-      'coc-lists', 'coc-python', 'coc-tsserver', 'coc-yaml', 'coc-prettier', 'coc-lua',
-      '@yaegassy/coc-pug', 'coc-xml'}
-      vim.fn['coc#rpc#request']('installExtensions', extensions)
+    "hrsh7th/nvim-cmp",
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-buffer",
+    },
+    config = function()
+      local cmp = require("cmp")
+      cmp.setup({
+        mapping = cmp.mapping.preset.insert({
+          ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+          ['<C-n>'] = cmp.mapping.select_next_item(),
+          ['<C-p>'] = cmp.mapping.select_prev_item(),
+          ['<C-Space>'] = cmp.mapping.complete(),
+        }),
+        sources = {
+          { name = 'nvim_lsp' },
+          { name = 'buffer' },
+        },
+      })
     end,
   },
+  {
+    "neovim/nvim-lspconfig",
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp",
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
+    },
+    config = function()
+      require("config.lsp").setup()
+    end,
+  },
+
+  -- Formatting
+  {
+    "stevearc/conform.nvim",
+    config = function()
+      require("conform").setup({
+        formatters_by_ft = {
+          javascript = { "prettier" },
+          typescript = { "prettier" },
+          javascriptreact = { "prettier" },
+          typescriptreact = { "prettier" },
+          css = { "prettier" },
+          html = { "prettier" },
+          json = { "prettier" },
+          yaml = { "prettier" },
+          markdown = { "prettier" },
+        },
+        format_on_save = { timeout_ms = 500 },
+      })
+    end,
+  },
+
+  -- Navigation
+  {
+    "ibhagwan/fzf-lua",
+    config = function()
+      require("fzf-lua").setup({})
+    end,
+  },
+  {
+    "MagicDuck/grug-far.nvim",
+    config = function()
+      require("grug-far").setup({})
+    end,
+  },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+    config = function()
+      require("neo-tree").setup({})
+    end,
+  },
+
   { "tpope/vim-abolish" },
   { "tpope/vim-eunuch" },
   { "tpope/vim-fugitive" },
