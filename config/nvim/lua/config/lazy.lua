@@ -33,7 +33,6 @@ require("lazy").setup({
     end,
   },
   { "tpope/vim-abolish" },
-  { "tpope/vim-commentary" },
   { "tpope/vim-eunuch" },
   { "tpope/vim-fugitive" },
   { "tpope/vim-repeat" },
