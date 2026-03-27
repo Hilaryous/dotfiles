@@ -4,3 +4,5 @@ uploads/
 _vimrc_local.vim
 **/packer_compiled.lua
 .cursor
+.claude
+config/fish/conf.d/secrets.fish

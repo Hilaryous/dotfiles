@@ -64,17 +64,21 @@ require("lazy").setup({
     config = function()
       require("conform").setup({
         formatters_by_ft = {
-          javascript = { "prettier" },
-          typescript = { "prettier" },
-          javascriptreact = { "prettier" },
-          typescriptreact = { "prettier" },
+          javascript = { "eslint", "prettier" },
+          typescript = { "eslint", "prettier" },
+          javascriptreact = { "eslint", "prettier" },
+          typescriptreact = { "eslint", "prettier" },
           css = { "prettier" },
           html = { "prettier" },
           json = { "prettier" },
+          xml = { "xmllint" },
           yaml = { "prettier" },
           markdown = { "prettier" },
         },
-        format_on_save = { timeout_ms = 500 },
+        format_on_save = function(bufnr)
+          if vim.bo[bufnr].filetype == "xml" then return end
+          return { timeout_ms = 500 }
+        end,
       })
     end,
   },

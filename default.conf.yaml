@@ -17,6 +17,10 @@
     ~/.aws:
       glob: true
       path: aws/*
+    ~/.claude:
+      glob: true
+      path: claude/*
+      create: true
     ~/.git-hooks:
       glob: true
       path: git/hooks/*
@@ -29,3 +33,6 @@
     description: Setup pyenv and vf
     stderr: true
     stdout: true
+  -
+    command: '[ -d ~/.tmux/plugins/tpm ] || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm'
+    description: Install TPM (tmux plugin manager)

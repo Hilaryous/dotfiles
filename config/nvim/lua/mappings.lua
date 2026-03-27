@@ -38,5 +38,8 @@ vim.keymap.set('n', 'gy', ':Neotree toggle<CR>', { silent = true })
 -- LSP
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { silent = true })
 
+-- Formatting
+vim.keymap.set('n', '<Leader>f', function() require('conform').format() end, { silent = true })
+
 -- Pretty print json
 vim.keymap.set('n', '<Leader>j', ':!python -m json.tool<CR>', { noremap = true })

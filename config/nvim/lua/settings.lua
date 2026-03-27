@@ -76,3 +76,11 @@ vim.api.nvim_create_autocmd({"FileType"}, {
 })
 
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, { silent = true })
+
+vim.o.updatetime = 500
+
+vim.api.nvim_create_autocmd("CursorHold", {
+  callback = function()
+    vim.diagnostic.open_float(nil, { focus = false })
+  end,
+})

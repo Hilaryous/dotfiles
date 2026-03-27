@@ -17,6 +17,7 @@
   brew "ripgrep"
   brew "ruby-build"
   brew "starship"
+  brew "terminal-notifier"
   brew "tmux"
   brew "tmuxinator"
   brew "tree"
